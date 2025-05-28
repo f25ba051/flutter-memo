@@ -1,65 +1,65 @@
 # Flutterについてのまとめ
 # プロジェクトのフォルダ類
-### 「.dart_tool」フォルダ
-Dart言語が自動生成するファイル類を保管するところ。
+>### 「.dart_tool」フォルダ
+>Dart言語が自動生成するファイル類を保管するところ。
 
-### 「idea」フォルダ
-IntelliJ IDEA開発ツールの設定情報。
+>### 「idea」フォルダ
+> IntelliJ IDEA開発ツールの設定情報。
 
-### 「build」フォルダ
-ビルドして生成されるファイル類。
+>### 「build」フォルダ
+> ビルドして生成されるファイル類。
 
-### 「android」フォルダ
-Androidアプリ生成に必要なファイル類(プラットフォームにAndroidを選択した場合)。 
+>### 「android」フォルダ
+>Androidアプリ生成に必要なファイル類(プラットフォームにAndroidを選択した場合)。 
 
-### 「ios」フォルダ
-iosアプリ生成に必要なファイル類(プラットフォームにIOSを選択した場合)。
+>### 「ios」フォルダ
+>iosアプリ生成に必要なファイル類(プラットフォームにIOSを選択した場合)。
 
-### 「Linux」フォルダ
-Linuxアプリ生成に必要なファイル類(プラットフォームにLinux を選択した場合)。
+>### 「Linux」フォルダ
+>Linuxアプリ生成に必要なファイル類(プラットフォームにLinux を選択した場合)。
 
-### 「macOS」フォルダ
-macOSアプリ生成に必要なファイル類(プラットフォームに macOSを選択した場合)。
+>### 「macOS」フォルダ
+>macOSアプリ生成に必要なファイル類(プラットフォームに macOSを選択した場合)。
 
-### 「windows」フォルダ
-windowsアプリ生成に必要なファイル類(プラットフォームに Windowsを選択した場合)。
+>### 「windows」フォルダ
+>windowsアプリ生成に必要なファイル類(プラットフォームに Windowsを選択した場合)。
 
-### 「web」フォルダ
-Webアプリ生成に必要なファイル類(プラットフォームにWeb を選択した場合)。
+>### 「web」フォルダ
+>Webアプリ生成に必要なファイル類(プラットフォームにWeb を選択した場合)。
 
-### 「lib」フォルダ
-ここにDartのスクリプトが保存される。
+>### 「lib」フォルダ
+>ここにDartのスクリプトが保存される。
 
-### 「test」フォルダ
-ユニットテスト関連のファイル類。
+>### 「test」フォルダ
+>ユニットテスト関連のファイル類。
 
 
 
 # プロジェクトのファイル類
 
-### .gitignore
-Gitで利用するファイル。
+>### .gitignore
+>Gitで利用するファイル。
 
-### .metadata
-Flutterツールが利用するファイル。
+>### .metadata
+>Flutterツールが利用するファイル。
 
-### .packages
-利用しているパッケージ情報。
+>### .packages
+>利用しているパッケージ情報。
 
-### anyrysis_options.yaml
-Dartの分析に関するファイル。
+>### anyrysis_options.yaml
+>Dartの分析に関するファイル。
 
-### fluter_app.iml
-モジュール定義ファイル。
+>### fluter_app.iml
+>モジュール定義ファイル。
 
-### pubspec.lock
-Pub (Dartのパッケージマネージャ)が利用するファイル。
+>### pubspec.lock
+>Pub (Dartのパッケージマネージャ)が利用するファイル。
 
-### pubspec.yaml
-Pubが利用するファイル。
+>### pubspec.yaml
+>Pubが利用するファイル。
 
-### README.md
-リードミーファイル。
+>### README.md
+>リードミーファイル。
 
 
 
@@ -68,9 +68,9 @@ Pubが利用するファイル。
 Flutterマテリアルデザインによるアプリのウィジェットがまとめられているパッケージ
 
 
-- void main()(
-    - runApp( ウィジェット );  
-- );
+>- void main()(
+>    - runApp( ウィジェット );  
+>- );
 
 **main関数**...アプリ起動時に呼び出される処理。ここに記述していく  
 **runApp関数**...アプリを起動する処理。
@@ -84,29 +84,48 @@ Stateless Widgetかステートを持つStateful Widgetのいずれかを継承�
 
 ## StatelessWidgetの定義
 
-- class **クラス名** extends StatelessWidget (  
-    - @override  
-    - widget build(BuildContext context) (  
-        - return MaterialApp(...略...);
+>- class **クラス名** extends StatelessWidget (  
+>    - @override  
+>    - widget build(BuildContext context) (  
+>        - return MaterialApp(...略...);  
+>	- ),
+> - )
 
 **build**...Stateless Widgetクラスのメソッド。ウィジェットが生成される際に呼び出される。  
 **MaterialApp**...マテリアルデザインのアプリを管理するクラス。  
 **BuildContext**...ウィジェットに関する機能がまとめられたもの
 
 # Material Appクラスについて
-- return MaterialApp(  
-	- title: 'Flutter demo,  
-	- home: Text(  
-		- 'Hello, Flutter World!!!',  
-		- style: TextStyle(fontSize:32.0),  
-	- ),  
-- );  
+>- return MaterialApp(  
+>	- title: 'Flutter demo,  
+>	- home: Text(  
+>		- 'Hello, Flutter World!!!',  
+>		- style: TextStyle(fontSize:32.0),  
+>	- ),  
+>- );  
 
 **title**...アプリケーションのタイトル  
 **home**...アプリケーションに組み込まれるウィジェット
 
 # ウィジェットまとめ
 ## Text ウィジェット
-Text...テキストの表示を行うためのウィジェット
-style...テキストスタイルを示す値（テキストサイズや太さ、フォントなど）
+>- Text(
+>	- 表示したい文字列,
+>	- style = TextStyle(
+>		- fontSize: サイズ,
+>		- color: 色,
+>		- fontWeight: 太さ,
+>		- fontFamily: フォント,
+>	- )
+>- )
 
+**Text**...テキストの表示を行うためのウィジェット  
+**style**...テキストスタイルを示す値（テキストサイズや太さ、フォントなど）
+
+### TextStyleのプロパティ一覧
+|プロパティ名|入力|例|
+|:---:|:---:|:---:|
+|fontSize|数値|30
+|color|Colors.カラー名 <br> Color(ARGB)|Colors.red <br> Color(0xFF000000)|
+|fontWeight|FontWeight.w100~900（百の位のみ）<br> FontWeight.bold|FontWeight.w400
+|fontFamily|フォント名|"Roboto"|
