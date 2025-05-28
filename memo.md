@@ -84,10 +84,10 @@ Stateless Widgetかステートを持つStateful Widgetのいずれかを継承�
 
 ## StatelessWidgetの定義
 
-class **クラス名** extends StatelessWidget (  
-    @override  
-    widget build(BuildContext context) (  
-        return MaterialApp(...略...);
+- class **クラス名** extends StatelessWidget (  
+    - @override  
+    - widget build(BuildContext context) (  
+        - return MaterialApp(...略...);
 
 **build**...Stateless Widgetクラスのメソッド。ウィジェットが生成される際に呼び出される。  
 **MaterialApp**...マテリアルデザインのアプリを管理するクラス。  
