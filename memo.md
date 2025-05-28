@@ -109,6 +109,7 @@ Stateless Widgetかステートを持つStateful Widgetのいずれかを継承�
 
 # ウィジェットまとめ
 ## Text ウィジェット
+テキストの表示を行うためのウィジェット
 >- Text(
 >	- 表示したい文字列,
 >	- style = TextStyle(
@@ -118,8 +119,6 @@ Stateless Widgetかステートを持つStateful Widgetのいずれかを継承�
 >		- fontFamily: フォント,
 >	- )
 >- )
-
-**Text**...テキストの表示を行うためのウィジェット  
 **style**...テキストスタイルを示す値（テキストサイズや太さ、フォントなど）
 
 ### TextStyleのプロパティ一覧
@@ -129,3 +128,16 @@ Stateless Widgetかステートを持つStateful Widgetのいずれかを継承�
 |color|Colors.カラー名 <br> Color(ARGB)|Colors.red <br> Color(0xFF000000)|
 |fontWeight|FontWeight.w100~900（百の位のみ）<br> FontWeight.bold|FontWeight.w400
 |fontFamily|フォント名|"Roboto"|
+
+## Padding ウィジェット
+ウィジェットの周りに余白を作るためのウィジェット
+>- Padding(
+>	- padding: 余白,
+>	- child: ウィジェット
+>- )
+
+### Paddingウィジェットのプロパティ一覧
+|プロパティ名|入力|例|
+|:---:|:---:|:---:|
+|padding|EdgeInsets.only（左右上下個別に設定） <br> EdgeInsets.all（左右上下すべて一気に設定）|EdgeInsets.only(top: 10, bottom: 5, left: 20, right: 15) <br> EdgeInsets.all(20)
+|child|Text、Iconウィジェットなど|Text(...略...)|
